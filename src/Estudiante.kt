@@ -2,10 +2,13 @@ class Estudiante(val curso: String,
                  val calificacionPromedio: Double,
                  nombre: String,
                  edad: Int,
-                 id: String) {
+                 id: String) : Persona(nombre, edad, id){
 
+    override fun actividad() {
+        println("$nombre está estudiando en la carrera de $curso.")
+    }
 
-    fun mostrarCalificacion(calificacionPromedio: Double){
+    fun mostrarCalificacion(){
         println(calificacionPromedio)
     }
 }
